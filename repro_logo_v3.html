@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #333;
+            display: flex;
+            gap: 50px;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .logo-container {
+            width: 100px;
+            height: 100px;
+        }
+
+        .label {
+            color: white;
+            text-align: center;
+            font-family: sans-serif;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="label">Simple Icons Version</div>
+        <div class="logo-container">
+            <!-- Simple Icons Path -->
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                <circle cx="12" cy="12" r="12" fill="#FFCC33" />
+                <circle cx="12" cy="12" r="10" fill="#000000" />
+                <path fill="#FFFFFF"
+                    d="m-1.29 4.898L7.465 10.14l-1.68-1.358-2.95 2.948c1.037.945 2.282 2.097 3.687 3.502l7.673 7.673 3.41-3.41-6.567-6.567c-.276-.276-.576-.622-.737-1.014-.369-.783-.53-2.004.369-2.903 1.106-1.106 2.58-.645 4.009.784l6.313 6.313 3.41-3.41-6.59-6.59c-.276-.276-.599-.691-.76-1.037-.438-.898-.415-2.027.392-2.834 1.129-1.129 2.603-.714 4.24.922l6.128 6.129 3.41-3.41L15.6 4.726c-3.364-3.364-6.52-3.249-8.686-1.083-.83.83-1.337 1.705-1.59 2.696a6.71 6.71 0 0 0-.092 2.81l-.046.047c-1.66-.691-3.549-.277-5 1.175-1.936 1.935-1.866 3.986-1.636 5.184l-.07.07z"
+                    transform="translate(12, 12) scale(0.5) translate(-12, -12)" />
+                <!-- Note: The path I extracted seemed to be relative to a different coordinate system or part of a larger shape.
+                     The Simple Icons path `M12 0...` included the circle. I extracted the part starting `m-1.29...`.
+                     Let's try using the FULL Simple Icons path but masking or just using the 'm' part if I can isolate it.
+                     Actually, the Simple Icons path is a single compound path for the whole icon (circle + m).
+                     If I want just the 'm' to put inside my own colored circles, I need to be careful.
+                     Let's try rendering the FULL Simple Icons path as a check first. -->
+            </svg>
+        </div>
+    </div>
+
+    <div>
+        <div class="label">Full Simple Icons Path (Monochrome)</div>
+        <div class="logo-container">
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-full h-full" fill="white">
+                <path
+                    d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm-1.29 4.898L7.465 10.14l-1.68-1.358-2.95 2.948c1.037.945 2.282 2.097 3.687 3.502l7.673 7.673 3.41-3.41-6.567-6.567c-.276-.276-.576-.622-.737-1.014-.369-.783-.53-2.004.369-2.903 1.106-1.106 2.58-.645 4.009.784l6.313 6.313 3.41-3.41-6.59-6.59c-.276-.276-.599-.691-.76-1.037-.438-.898-.415-2.027.392-2.834 1.129-1.129 2.603-.714 4.24.922l6.128 6.129 3.41-3.41L15.6 4.726c-3.364-3.364-6.52-3.249-8.686-1.083-.83.83-1.337 1.705-1.59 2.696a6.71 6.71 0 0 0-.092 2.81l-.046.047c-1.66-.691-3.549-.277-5 1.175-1.936 1.935-1.866 3.986-1.636 5.184l-.07.07z" />
+            </svg>
+        </div>
+    </div>
+</body>
+
+</html>

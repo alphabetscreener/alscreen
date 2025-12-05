@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #333;
+            display: flex;
+            gap: 50px;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .logo-container {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #555;
+        }
+
+        .label {
+            color: white;
+            text-align: center;
+            font-family: sans-serif;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="label">Original Path (No Transform)</div>
+        <div class="logo-container">
+            <svg viewBox="0 0 24 24" class="w-full h-full">
+                <!-- Grid for reference -->
+                <defs>
+                    <pattern id="grid" width="1" height="1" patternUnits="userSpaceOnUse">
+                        <path d="M 1 0 L 0 0 0 1" fill="none" stroke="gray" stroke-width="0.1" />
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+
+                <!-- Part 1: The "m" body -->
+                <path fill="red" opacity="0.8"
+                    d="M19.3 10.8c-1.5 0-2.6 1-3.2 2.1-.6-1-1.8-2.1-3.4-2.1-2.4 0-3.8 1.6-3.8 4.2V21h3.2v-5.6c0-1.2.4-1.9 1.3-1.9.9 0 1.3.7 1.3 1.9V21h3.2v-5.6c0-1.2.4-1.9 1.3-1.9.9 0 1.3.7 1.3 1.9V21h3.2v-6.8c0-2.2-1.3-3.4-3.4-3.4z" />
+
+                <!-- Part 2: The "line" (left leg) -->
+                <path fill="blue" opacity="0.8" d="M5.4 10.8H2.2V21h3.2V10.8z" />
+            </svg>
+        </div>
+    </div>
+</body>
+
+</html>
