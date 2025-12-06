@@ -1,0 +1,16 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Proxy for Gemini API
+[[redirects]]
+  from = "/proxy/gemini/*"
+  to = "https://generativelanguage.googleapis.com/:splat"
+  status = 200
+  force = true
+
+# Catch-all for SPA
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
