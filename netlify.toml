@@ -3,7 +3,7 @@
   command = "npm run build"
 
 [[redirects]]
-  from = "/api/gemini/*"
+  from = "/proxy/gemini/*"
   to = "https://generativelanguage.googleapis.com/:splat"
   status = 200
   force = true
