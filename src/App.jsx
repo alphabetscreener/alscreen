@@ -434,7 +434,7 @@ const App = () => {
       queryText = `Search google for this Rotten Tomatoes URL: "${inputUrl}". Identify the Movie/Show Title and Year. Then find the IMDb ID (tt code) for that specific title.`;
     }
 
-    const apiUrl = `/gemini-api/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+    const apiUrl = `/gemini-secure?key=${apiKey}`;
     const tools = [{ "google_search": {} }];
 
     const prompt = `${queryText}
@@ -681,7 +681,7 @@ const App = () => {
 
   const callGeminiApi = useCallback(async (prompt, structured = true, sanitized = false) => {
     const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
-    const apiUrl = `/gemini-api/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+    const apiUrl = `/gemini-secure?key=${apiKey}`;
     const tools = [{ "google_search": {} }];
 
     const activeTerm = sanitized ? SANITIZED_THEMATIC_TERM : THEMATIC_TERM;
