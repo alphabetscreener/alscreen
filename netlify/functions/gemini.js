@@ -1,9 +1,8 @@
-const fetch = require('node-fetch');
+// Native Fetch is available in Node 18+ (We set Node 20 in netlify.toml)
 
-// Check both variable names to be safe
 const apiKey = process.env.VITE_GEMINI_API_KEY || process.env.GEMINI_API_KEY;
 
-exports.handler = async function (event, context) {
+export const handler = async (event, context) => {
   // CORS Headers
   const headers = {
     'Access-Control-Allow-Origin': '*',
