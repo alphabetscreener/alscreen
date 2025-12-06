@@ -9,6 +9,13 @@
   status = 200
   force = true
 
+# Debug Rule
+[[redirects]]
+  from = "/ping"
+  to = "https://www.google.com"
+  status = 200
+  force = true
+
 # Catch-all for SPA
 [[redirects]]
   from = "/*"

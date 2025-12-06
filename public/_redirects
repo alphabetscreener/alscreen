@@ -1,2 +1,0 @@
-/proxy/gemini/*  https://generativelanguage.googleapis.com/:splat  200!
-/*  /index.html  200
