@@ -2,21 +2,28 @@
   command = "npm run build"
   publish = "dist"
 
-# Proxy for Gemini API
+# 1. Main Gemini Proxy (Renamed)
 [[redirects]]
-  from = "/proxy/gemini/*"
+  from = "/gemini-api/*"
   to = "https://generativelanguage.googleapis.com/:splat"
   status = 200
   force = true
 
-# Debug Rule
+# 2. Debug Wildcard Proxy (To verify Netlify Wildcards)
+[[redirects]]
+  from = "/debug-api/*"
+  to = "https://jsonplaceholder.typicode.com/:splat"
+  status = 200
+  force = true
+
+# 3. Simple Ping Test
 [[redirects]]
   from = "/ping"
   to = "https://www.google.com"
   status = 200
   force = true
 
-# Catch-all for SPA
+# 4. SPA Catch-all (Must be last)
 [[redirects]]
   from = "/*"
   to = "/index.html"

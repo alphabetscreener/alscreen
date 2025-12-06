@@ -6,10 +6,10 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/proxy/gemini': {
+      '/gemini-api': {
         target: 'https://generativelanguage.googleapis.com',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/proxy\/gemini/, ''),
+        rewrite: (path) => path.replace(/^\/gemini-api/, ''),
       },
     },
   },
